@@ -11,12 +11,14 @@ Usually, each directory listed in ``sys.path`` is searched in order.  When
 searching a particular directory ``foo.py`` is looked for first and if that
 is not found then ``foo.mpy`` is looked for, then the search continues in the
 next directory if neither is found.  As such, ``foo.py`` will take precedence
-over ``foo.mpy``.
+over ``foo.mpy``. The ``boot.py`` and ``main.py`` files cannot be compiled to ``.mpy`` and must be located as ``.py`` files in the root directory.
 
 These .mpy files can contain bytecode which is usually generated from Python
 source files (.py files) via the ``mpy-cross`` program.  For some architectures
 an .mpy file can also contain native machine code, which can be generated in
 a variety of ways, most notably from C source code.
+
+
 
 Versioning and compatibility of .mpy files
 ------------------------------------------
